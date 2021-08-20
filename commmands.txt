@@ -1,0 +1,12 @@
+Use Linux rsync Command to copy a folder
+rsync -av /path/to/source/ /path/to/destination/
+rsync -av /path/to/source/ /path/to/destination/source/
+
+To backup my home directory, which consists of large files and mail folders to /media/backup, enter:
+rsync -avz /home/vivek /media/backup
+
+
+I can copy a folder to remote machine called server1.cyberciti.biz as follows:
+$ rsync -avz /home/vivek/ server1.cyberciti.biz:/home/backups/vivek/
+
+
