@@ -1,0 +1,5 @@
+# Networking
+ip a s enp1s0  #muestra info de la red del servidor
+ip -s link show enp1s0 #muestra info del trafico de la red
+
+
