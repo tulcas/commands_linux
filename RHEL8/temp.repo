@@ -1,0 +1,13 @@
+[baseOS]
+name=BaseOS
+baseurl=file:///mnt/BaseOS
+enabled=1
+gpgcheck=0
+
+
+[AppStream]
+name=AppStream
+baseurl=file:///mnt/AppStream
+enabled=1
+gpgcheck=0
+

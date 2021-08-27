@@ -32,14 +32,14 @@ firewall-cmd --add-masquerade --permanent; firewall-cmd --reload
 ## Install IPA Server and Others tools
 yum module list idm
 yum module info idm:DL1
-yum -y install @idm:DL1
-yum install -y ipa-server ipa-server-dns bind-dyndb-ldap
+yum -y install @idm:DL1 
+yum install -y ipa-server ipa-server-dns bind-dyndb-ldap 
 
 ## Setting the right config on hosts file
-echo "$IP_ADDR $HOSTNAME $SHORTNAME" >> /etc/hosts
+echo "192.168.20.80 rocky8master.labrhel.com rocky8master" >> /etc/hosts
 
 # Installing everything unattended
-ipa-server-install --domain=$DOMAIN --realm=$REALM --ds-password=password --admin-password=password --hostname=$HOSTNAME --ip-address=$IP_ADDR --reverse-zone=20.168.192.in-addr.arpa. --forwarder=8.8.8.8 --allow-zone-overlap --setup-dns --unattended
+ipa-server-install --domain=labrhel.com --realm=LABRHEL.com --ds-password=password --admin-password=password --hostname=rocky8master.labrhel.com --ip-address= --reverse-zone=20.168.192.in-addr.arpa. --forwarder=8.8.8.8 --allow-zone-overlap --setup-dns --unattended
 
 # Opening ports
 for i in http https ldap ldaps kerberos kpasswd dns ntp; do firewall-cmd --permanent --add-service $i; done

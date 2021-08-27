@@ -16,12 +16,14 @@
 
 #!/bin/sh
 ## Loading Variables
-IP_ADDR=192.168.20.50
-HOSTNAME=rhel8master.labrhel.com
-SHORTNAME=rhel8master
+IP_ADDR=192.168.20.80
+HOSTNAME=rocky8master.labrhel.com
+SHORTNAME=rocky8master
 DOMAIN=labrhel.com
-REALM=LABRHEL.com
+REALM=LABRHEL.COM
 LDAPHOME=/home/ldap
+PASSWD=fedores7x
+DNSGOOGLE=8.8.8.8
 
 ## Starting and Enabling Firewalld
 systemctl enable firewalld ; systemctl start firewalld
@@ -39,7 +41,7 @@ yum install -y ipa-server ipa-server-dns bind-dyndb-ldap
 echo "$IP_ADDR $HOSTNAME $SHORTNAME" >> /etc/hosts
 
 # Installing everything unattended
-ipa-server-install --domain=$DOMAIN --realm=$REALM --ds-password=password --admin-password=password --hostname=$HOSTNAME --ip-address=$IP_ADDR --reverse-zone=20.168.192.in-addr.arpa. --forwarder=8.8.8.8 --allow-zone-overlap --setup-dns --unattended
+ipa-server-install --domain=$DOMAIN --realm=$REALM --ds-password=$PASSWD --admin-password=$PASSWD --hostname=$HOSTNAME --ip-address=$IP_ADDR --reverse-zone=20.168.192.in-addr.arpa. --forwarder=$DNSGOOGLE --allow-zone-overlap --setup-dns --unattended
 
 # Opening ports
 for i in http https ldap ldaps kerberos kpasswd dns ntp; do firewall-cmd --permanent --add-service $i; done
@@ -187,23 +189,10 @@ systemctl restart nmb
 # nmcli connection up eth0
 
 # Creating Network repo
-mkdir -p /var/www/html/repos
+#mkdir -p /var/www/html/repos
 #cp -a /mnt/iso /var/ftp/pub/repos/rhel8
-cp -a /mnt /var/www/html/repos/rhel8
-restorecon -Rvv /var/www/html
+#cp -a /mnt /var/www/html/repos/rhel8
+#restorecon -Rvv /var/www/html
 
-# Creating Base Repo File - base
-## BaseOS and AppStream:
-echo "[base]" >> /var/www/html/repos/base.repo
-echo "name = Base Reporitory for RHEL 8" >> /var/www/html/repos/base.repo
-echo "baseurl = http://rhel8master.labrhel.com/repos/rhel8/BaseOS" >> /var/www/html/repos/base.repo
-echo "enabled = 0" >> /var/www/html/repos/base.repo
-echo "gpgcheck = 0" >> /var/www/html/repos/base.repo
 
-echo "[appstream]" >> /var/www/html/repos/base.repo
-echo "name = App Stream Reporitory for RHEL 8" >> /var/www/html/repos/base.repo
-echo "baseurl = http://rhel8master.labrhel.com/repos/rhel8/AppStream" >> /var/www/html/repos/base.repo
-echo "enabled = 0" >> /var/www/html/repos/base.repo
-echo "gpgcheck = 0" >> /var/www/html/repos/base.repo
-
-# systemctl restart vsftpd
+# systemctl restart vsftp

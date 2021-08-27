@@ -1,0 +1,2 @@
+mount /dev/cdrom /mnt
+
