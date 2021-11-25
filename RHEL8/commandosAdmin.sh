@@ -288,147 +288,13 @@ chmod a-w C3/  #cambio de permisos a todos ALL #se quita escritura a todos
 
 
 
-
-
-Tecnologías
-
-
-
-AWS certified cloud practitioner training
-
-
-
-AWS Certified Cloud Practitioner
-
-
-
-Nombre: Ricardo Andres Figuera
-DNI: 30098572
-Linea: 011-4304-0024
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Grupo 47 
-rominalpantano@live.com Pantano Romina Laura 
-lucianaporcel@gmail.com Porcel Luciana 
-barbadoandres@gmail.com Figuera Ricardo 
-davidm231@hotmail.com Martinez David
-
-
-
-https://discord.gg/7p5yG2Kk
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-echo "UUID=07d0c6cd-f65b-4449-a42f-7f25ad45818e  swap swap defaults 0 0" >> /etc/fstab (montar particion swap en fstab)
-
-14 15  de SEPTIEMBRE
-DIA1
-https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_ZWQzYmUyODItNDcwYS00OTdmLWI2YjAtNDA1ZDdjNDBmNDU3%40thread.v2%2F0%3Fcontext%3D%257B&type=meetup-join&deeplinkId=4716518e-d737-469c-9f75-a7cff0ce0646&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true
-DIA 2
-https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_YTNjNzY4ODMtZjBkNS00MGY5LTllNjEtMzQ5YmVkYzk5YmVh%40thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2522e9c3f614-c8d9-4095-9ad4-87d2c9a7d8c4%2522%252c%2522Oid%2522%253a%252211a54601-a373-4388-a82e-7a7ed7101acb%2522%252c%2522IsBroadcastMeeting%2522%253atrue%257d%26btype%3Da%26role%3Da%26anon%3Dtrue&type=meetup-join&deeplinkId=9c4f150d-b7a4-4c2f-9a97-489b5ed71794&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true
-
-
-
-
-
-
-
-
-
-systemctl start vdo
-systemctl enable vdo
-systemctl status vdo
-
-
-
-
-
-
-
-
-
+#########################################################################################################
+*** NOTAS ***
+
+#########################################################################################################
+"Dejar de empezar y empeza a terminar"
 shutdown -h 22:45 “A las 22:53 de la madrugada el sistema va a ser apagado”
-
-
-
+sudo systemctl disable NetworkManager && sudo systemctl stop NetworkManager ; sudo systemctl restart network.service
 Ser participativo, autónomo y proactivo, con ganas de opinar y contribuir en cómo trabajamos en el equipo.
 
 
@@ -437,43 +303,84 @@ Ser participativo, autónomo y proactivo, con ganas de opinar y contribuir en c�
 
 
 
-192.168.1.38
-192.168.1.39
-
-
-$ sudo vim /etc/sysconfig/network-scripts/ifcfg-fortibr10
-
-
-DEVICE=fortibr10
-STP=no
-TYPE=Bridge
-BOOTPROTO=none
-DEFROUTE=yes
-NAME=br10
-ONBOOT=yes
-DNS1=8.8.8.8
-DNS2=192.168.1.1
-IPADDR=192.168.1.39
-PREFIX=24
-GATEWAY=192.168.1.1
 
 
 
-DEVICE=eth0
-TYPE=Ethernet
-ONBOOT=yes
-BRIDGE=fortibr10
-
-
-sudo systemctl disable NetworkManager && sudo systemctl stop NetworkManager ; sudo systemctl restart network.service
-
-nmcli connection down eno1 ; nmcli connection up eno1 
 
 
 
-"Dejar de empezar y empeza a terminar"
 
-OTERO JOSE LUIS Ver Informe Completo. Posible DNI, 16.224.872. CUIT/CUIL, 20-16224872-4. Edad Estimada, 58 años
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
