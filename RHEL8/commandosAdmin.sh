@@ -272,6 +272,20 @@ date -d "+8 days" +"%Y-%m-%d" # Cacular dias en el futuro
 for i in dev3 dev2 admin3; do echo "passwd" | passwd $i --stdin; done #cambia passwd mutiple users
 
 
+#########################################################################################################
+**** Gestion de Permisos Sobre Archivos*****
+#########################################################################################################
+
+ls -ld #muestra pemisos de carpeta
+chmod u-w C3/ #quita permisos de escritura
+chmod u+w C3/ #suma permisos de escritura
+
+chmod u=rwx,g=rwx,o=rwx C3/ #cambio de permisos a usuarios grupos y others #suma de permisos
+chmod u-w,g-x,o-rwx C3/ #cambio de permisos a usuarios grupos y others #resta de permisos
+chmod a-x C3/ #cambio de permisos a todos ALL #se quita ejecucion a todos
+chmod a-w C3/  #cambio de permisos a todos ALL #se quita escritura a todos
+
+
 
 
 
