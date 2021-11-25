@@ -290,13 +290,19 @@ chmod a-w C3/  #cambio de permisos a todos ALL #se quita escritura a todos
 
 #########################################################################################################
 *** NOTAS ***
-
 #########################################################################################################
 "Dejar de empezar y empeza a terminar"
 shutdown -h 22:45 “A las 22:53 de la madrugada el sistema va a ser apagado”
 sudo systemctl disable NetworkManager && sudo systemctl stop NetworkManager ; sudo systemctl restart network.service
 Ser participativo, autónomo y proactivo, con ganas de opinar y contribuir en cómo trabajamos en el equipo.
 
+#########################################################################################################
+*** NOTAS ***
+#########################################################################################################
+
+#########################################################################################################
+*** NOTAS ***
+########################################################################################################
 
 
 
