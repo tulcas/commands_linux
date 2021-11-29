@@ -285,6 +285,9 @@ chmod u-w,g-x,o-rwx C3/ #cambio de permisos a usuarios grupos y others #resta de
 chmod a-x C3/ #cambio de permisos a todos ALL #se quita ejecucion a todos
 chmod a-w C3/  #cambio de permisos a todos ALL #se quita escritura a todos
 
+chmod -R o+X LAB11/ #cambiar los permisos recursivamente a todas las carpetas pero NO a los archivos dentro
+
+
 
 
 
@@ -300,24 +303,36 @@ Ser participativo, aut√≥nomo y proactivo, con ganas de opinar y contribuir en c√
 *** NOTAS ***
 #########################################################################################################
 
-#########################################################################################################
-*** NOTAS ***
-########################################################################################################
+
+###########################
+*** ROADMAP  DEVOPS/SRE ***
+###########################
+
+1. Git 
+2. Linux (basic administrar servidores)
+3. Networking (REDES) (basico abrir puertos configurar firewal ) CCNA
+4. Contenedores, Docker, POD,
+
+*** continuos ingtegration, continuos delilvery *** 
+
+5. Heramientas de contruccion , MAven, grada para JAVA, NPM para javascritp 
+ - Repositorio de artefacto // Nexus, DOCKER HUB
+ - Automatizar el build : Jenkins, gitlab, github action
+
+6. AWS, aprende un solo proveedor, solo aprende los servicios que necesitas
+7. Orquestacion de contenedores Kubernetes, Docker Compose
+8. Monitoreo, prometheus, nagios, graphana, cloudwatch (envia mensajes al celular del admin)
+9. Infraestructura como codigo (definir todo lo que la infraestructura necesita en archivos y luego desplegar esto de forma automatica)
+-  Ambientes de produccion, pruebas, desarollo
+-  Herramientas de aprovisionamiento, para crear infraestructura por ej:Terraform es agnostico, cludformation es para AWS y solo sirve para AWS
+-  Gestion de configuracion: ANSIBLE, CHEF, PUPPET
 
 
-#########################################################################################################
-*** NOTAS ***
-#########################################################################################################
-
-#########################################################################################################
-*** NOTAS ***
-########################################################################################################
-
-
-
-
-
-
+10. Lenguajes de Scripting
+   - BASH
+   - python
+   - go
+   - Ruby
 
 
 
