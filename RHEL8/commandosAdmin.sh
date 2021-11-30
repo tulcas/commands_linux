@@ -288,6 +288,17 @@ chmod a-w C3/  #cambio de permisos a todos ALL #se quita escritura a todos
 chmod -R o+X LAB11/ #cambiar los permisos recursivamente a todas las carpetas pero NO a los archivos dentro
 
 
+*******************************************************
+Sticky bit
+*******************************************************
+
+
+
+chmod 3770 contabilidad/ # sticky bit numerico
+chmod u=rwx,g=srwx,o=t--- servicios/ # sticky bit modal
+*******************************************************
+*******************************************************
+
 
 
 
