@@ -273,7 +273,7 @@ for i in dev3 dev2 admin3; do echo "passwd" | passwd $i --stdin; done #cambia pa
 
 
 #########################################################################################################
-**** Gestion de Permisos Sobre Archivos*****
+**** 14 - Gestion de Permisos Sobre Archivos*****
 #########################################################################################################
 
 ls -ld #muestra pemisos de carpeta
@@ -298,6 +298,98 @@ chmod 3770 contabilidad/ # sticky bit numerico
 chmod u=rwx,g=srwx,o=t--- servicios/ # sticky bit modal
 *******************************************************
 *******************************************************
+
+#########################################################################################################
+**** 16 Ajuste del rendimiento del sistema ****
+#########################################################################################################
+
+ps aux | grep userone
+
+kill -l
+
+#userone     2221  0.0  0.6  25688  5516 pts/1    S+   00:29   0:00 -bash
+
+kill 2221
+
+kill -9 2221 #obliga a morir el proceso
+
+bg # envia el proceso al background para que sigue ejecutandose
+
+jobs #muestra los procesos/comandos ejecutandose
+
+ps aux | grep userone # muestra todos los procesos que ejecuto el usuario: userone
+
+pkill tail #mata todos los procesos de tail corriendo
+
+pkill -U userone #mata todos los procesos y la sesion del usuario userone
+
+kill -l  #muestra listado de senales para enviar a kill 
+
+kill -SIGTERM %1 #ejecuta segun la senial enviada en %
+
+yum list installed tuned #verifica si esta instalado tuned
+
+systemctl status tuned.service #muesta estado del servicio
+
+systemctl status -l tuned  #muesta estado del servicio
+
+tuned-adm  active #muestra que profiles tiene activo
+
+tuned-adm  list #muestra todos los profiles que se pueden activar
+
+tuned-adm  recommend #muestra el profile recomendado automaticamente
+
+tuned-adm profile virtual-guest #cambia de profile en este caso se aplica virtual-guest
+
+tuned-adm  off #apaga el servicio tuned
+
+uptime #tiempo ejecucion del servidor
+
+lscpu #informacion del CPU
+
+
+for i in $(seq 1 3); do sha1sum /dev/zero & done #crea 3 procesos sha1sum y lo envia al bg
+
+ps -o pid,pcpu,nice,comm $(pgrep sha1sum) #muestra los procesos con filtros de la variable $(pgrep sha1sum)
+
+sudo renice -n -5 15308 #cambia el nice al proceso 15308
+
+watch -d 'ps -o pid,pcpu,nice,comm $(pgrep sha1sum)' #monitorea en tiempo real el cambio de asignacion de CPU del proceso sha1sum 
+
+
+#########################################################################################################
+**** 17 - Acceso a sistemas ****
+#########################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
