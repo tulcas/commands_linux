@@ -361,9 +361,63 @@ watch -d 'ps -o pid,pcpu,nice,comm $(pgrep sha1sum)' #monitorea en tiempo real e
 **** 17 - Acceso a sistemas ****
 #########################################################################################################
 
+ssh-keygen #genera key publica y privada
+ssh-keygen -f .ssh/new_pass  #genera key publica y privada en directorio especifico new_pass
+
+** compartir clve publica **
+ssh-copy-id root@rocky8master #copia la clave publica (como usuario root) del servidor rocky8master
+ssh rocky8master #conecta al server sin pedir passwd
 
 
 
+#########################################################################################################
+**** 18 - Programaciond de Tareas Futuras  ****
+#########################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git commit -a -m "16 - Ajuste de rendimiento Terminada" | git push
+
+
+http://tracking.payoneer.com/aff_c?offer_id=399&aff_id=42435&url_id=1047
+
+https://payouts.payoneer.com/partners/or.aspx?pid=rq7Aw%2bDhQx7gTkBitRw5Qg%3d%3d&utm_source=affiliates&utm_medium=EducacionIT&utm_campaign=Tracking&transaction_id=102e6a55664d95275b59c318b528a8&offer_id=399&aff_id=42435&rcid=200495
+
+
+https://register.payoneer.com/es/solution/educacionit/
 
 
 
