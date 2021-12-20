@@ -374,6 +374,33 @@ ssh rocky8master #conecta al server sin pedir passwd
 **** 18 - Programaciond de Tareas Futuras  ****
 #########################################################################################################
 
+# For details see man 4 crontabs
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+
+
+
+
+
+:r! cat /etc/crontab #en VIM te trae la leyenda
+
+00 03 * * mon /usr/bin/dnf -y update
+00 05 * * mon /usr/sbin/reboot 
+
+*/1 00-08 * * mon-fri /usr/bin/date  >> /home/userone/cron_date.txt #“At every minute past every hour from 0 through 8 on every day-of-week from Monday through Friday.”
+fedores7x
+
+
+
+TTTHHHWWWXXX%%%$$$###
+TTTHHHWWWXXX%%%$$$###
 
 
 
@@ -406,10 +433,7 @@ ssh rocky8master #conecta al server sin pedir passwd
 
 
 
-
-
-
-git commit -a -m "16 - Ajuste de rendimiento Terminada" | git push
+git commit -a -m "17 - Acceso a sistemas - Terminada" | git push
 
 
 http://tracking.payoneer.com/aff_c?offer_id=399&aff_id=42435&url_id=1047
